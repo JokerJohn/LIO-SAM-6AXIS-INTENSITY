@@ -26,3 +26,5 @@ We analyze why it is effective in indoor scenarios
 ![image-20220716205706914](README/image-20220716205706914.png)
 
 （red line segments are for visual loop constraint from intensity image）
+
+![image-20220716211813361](README/image-20220716211813361.png)
