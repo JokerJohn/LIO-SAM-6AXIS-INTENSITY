@@ -31,7 +31,10 @@ We analyze why it is effective in indoor scenarios
 
 ![image-20220713041036623](README/image-20220713041036623.png)![image-20220707185911022](README/image-20220707185911022.png)
 
-![image (1)](README/image%20(1).png)![image-20220621165929252](README/image-20220621165929252.png)
+![image-20220621165929252](README/image-20220621165929252.png)
+
+![image (1)](README/image%20(1).png)
 
 # Dataset
 
+Fusion Portable(IROS 2022)： 2 flir rgb camra+2 event camera+ ouster128 lidar + stim300(6-axis IMU)+ RTK (F9P)
