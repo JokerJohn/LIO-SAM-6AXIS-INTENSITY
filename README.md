@@ -20,8 +20,8 @@ The system also has the following problems
 
 We analyze why it is effective in indoor scenarios
 
-    1. There is no extrinsinc error when the lidar is projected to the intensity image compared to the camera.
-    2. Each pixel of the intensity image corresponds to a lidar point, there is an accurate depth, and the feature matching effect is good after 3D PNP Ransanc.
+1. There is no extrinsinc error when the lidar is projected to the intensity image compared to the camera.
+2. Each pixel of the intensity image corresponds to a lidar point, there is an accurate depth, and the feature matching effect is good after 3D PNP Ransanc.
 
 ![image-20220716205706914](README/image-20220716205706914.png)
 
