@@ -5,7 +5,7 @@ This repo integrates [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) and [Imagi
 
 This repo may help to test the intensity-based visual loop detection method
 
-- Contains all the functions of the LIO-SAM-6AXIS.
+- contain all the functions of the [LIO-SAM-6AXIS](https://github.com/JokerJohn/LIO_SAM_6AXIS).
 - support the intensity loop detection method with ICP refine to get the robust loop constriant and add them to the factor graph finally.
 
 # some instructions
