@@ -16,6 +16,21 @@ This repo may help to build more accurate point cloud maps by introducing the in
 
 ![image-20220717140256663](README/image-20220717140256663.png)
 
+## Dependency
+
+- **OpenCV3.x**(OpenCV4.x is also available, but a small amount of API may need to be modified for the Brief descriptor related library)
+
+- **DBoW3**（Please note that the C++ version is lower than 17）
+
+  ```
+  cd ~/Downloads/
+  git clone https://github.com/rmsalinas/DBow3.git
+  cd ~/Downloads/DBow3/
+  mkdir build && cd build
+  cmake -DCMAKE_BUILD_TYPE=Release ..
+  sudo make install
+  ```
+
 ## Run
 
 In the `LIO_SAM_6AXIS/LIO-SAM-6AXIS/launch/ouster128_indoors.launch`, just set your `bag_path` and `sequence`.(Other configuration files are not ready, be careful not to use them)
