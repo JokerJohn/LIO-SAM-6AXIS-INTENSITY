@@ -3,6 +3,10 @@
 
 This repo integrates [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) and [Imaging_lidar_place_recognition](https://github.com/TixiaoShan/imaging_lidar_place_recognition) to achieve better mapping and localization result for SLAM system. Thanks for their hard work！
 
+![image-20220716205706914](README/image-20220716205706914.png)
+
+（**red line segments** are for visual loop constraint from intensity image）
+
 # Introdction
 
 This repo may help to build more accurate point cloud maps by introducing the intensity-based visual loop constraint.
@@ -11,6 +15,28 @@ This repo may help to build more accurate point cloud maps by introducing the in
 - support the intensity loop detection method with ICP refine to get the robust loop constriant and add them to the factor graph.
 
 ![image-20220717140256663](README/image-20220717140256663.png)
+
+## Run
+
+In the `LIO_SAM_6AXIS/LIO-SAM-6AXIS/launch/ouster128_indoors.launch`, just set your `bag_path` and `sequence`.(Other configuration files are not ready, be careful not to use)
+
+```bash
+roslaunch lio_sam_6axis ouster128_indoors.launch
+```
+
+for this config file `LIO_SAM_6AXIS/LIO-SAM-6AXIS/config/indoor_ouster128.yaml`.The parameter configuration method is the same as that of the  [Imaging_lidar_place_recognition](https://github.com/TixiaoShan/imaging_lidar_place_recognition) system, and the brief descriptor and ORB feature matching are enabled at the same time indoors. The brief descriptor matching is consistent with VINS-MONO.
+
+```bash
+  # Feature matching
+  use_brief: 1                    # enabling flag for BRIEF feature
+  use_orb: 1                      # enabling flag for ORB feature
+  num_bri_features: 200           # feature num for BRIEF
+  num_orb_features: 500           # feature num for ORB
+
+  # Loop settings
+  min_loop_feature_num: 20        # minimum feature number threshold
+  min_loop_bow_th: 0.015          # BOW search threshold
+```
 
 # Discussion
 
@@ -28,10 +54,6 @@ We analyze why it is effective in indoor scenarios:
 
 1. There is no extrinsic error when the lidar is projected to the intensity image compared to RGB camera.
 2. Each pixel of the intensity image corresponds to a unique lidar point. So there is an accurate depth, and the feature matching performance is good after the outlier rejection by PNPRansanc .
-
-![image-20220716205706914](README/image-20220716205706914.png)
-
-（red line segments are for visual loop constraint from intensity image）
 
 ![image-20220716211813361](README/image-20220716211813361.png)
 
