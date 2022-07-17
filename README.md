@@ -18,7 +18,7 @@ This repo may help to build more accurate point cloud maps by introducing the in
 
 ## Run
 
-In the `LIO_SAM_6AXIS/LIO-SAM-6AXIS/launch/ouster128_indoors.launch`, just set your `bag_path` and `sequence`.(Other configuration files are not ready, be careful not to use)
+In the `LIO_SAM_6AXIS/LIO-SAM-6AXIS/launch/ouster128_indoors.launch`, just set your `bag_path` and `sequence`.(Other configuration files are not ready, be careful not to use them)
 
 ```bash
 roslaunch lio_sam_6axis ouster128_indoors.launch
