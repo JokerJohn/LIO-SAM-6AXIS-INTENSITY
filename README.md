@@ -3,12 +3,16 @@
 
 This repo integrates [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) and [Imaging_lidar_place_recognition](https://github.com/TixiaoShan/imaging_lidar_place_recognition) to achieve better mapping and localization result for SLAM system. Thanks for their hard work！
 
-This repo may help to test the intensity-based visual loop detection method
+# Introdction
+
+This repo may help to build more accurate point cloud maps by introducing the intensity-based visual loop constraint.
 
 - contain all the functions of the [LIO-SAM-6AXIS](https://github.com/JokerJohn/LIO_SAM_6AXIS).
-- support the intensity loop detection method with ICP refine to get the robust loop constriant and add them to the factor graph finally.
+- support the intensity loop detection method with ICP refine to get the robust loop constriant and add them to the factor graph.
 
-# some instructions
+![image-20220717140256663](README/image-20220717140256663.png)
+
+# Discussion
 
 The system also has the following problems
 
@@ -20,10 +24,10 @@ The system also has the following problems
 
 - In the outdoor scene, the resolution of the intensity image is too low, so it is difficult to achieve the place recognition stably
 
-We analyze why it is effective in indoor scenarios
+We analyze why it is effective in indoor scenarios: 
 
-1. There is no extrinsinc error when the lidar is projected to the intensity image compared to the RGB camera.
-2. Each pixel of the intensity image corresponds to a lidar point, there is an accurate depth, and the feature matching performance is good after the outlier rejection by PNPRansanc .
+1. There is no extrinsic error when the lidar is projected to the intensity image compared to RGB camera.
+2. Each pixel of the intensity image corresponds to a unique lidar point. So there is an accurate depth, and the feature matching performance is good after the outlier rejection by PNPRansanc .
 
 ![image-20220716205706914](README/image-20220716205706914.png)
 
@@ -37,4 +41,8 @@ We analyze why it is effective in indoor scenarios
 
 # Dataset
 
-Fusion Portable(IROS 2022)： 2 flir rgb camra+2 event camera+ ouster128 lidar + stim300(6-axis IMU)+ RTK (F9P)
+**Fusion Portable(IROS 2022)**：
+
+![image-20220717141558342](README/image-20220717141558342.png)
+
+I will upload some test rosbag later!
