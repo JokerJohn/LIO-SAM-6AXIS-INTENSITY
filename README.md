@@ -1,4 +1,5 @@
 # LIO-SAM-6AXIS-INTENSITY
+
 [LIO-SAM-6AXIS](https://github.com/JokerJohn/LIO_SAM_6AXIS) with intensity image-based  loop optimization. 
 
 This repo integrates [LIO-SAM](https://github.com/TixiaoShan/LIO-SAM) and [Imaging_lidar_place_recognition](https://github.com/TixiaoShan/imaging_lidar_place_recognition) to achieve better mapping and localization result for SLAM system. Thanks for their hard work！
@@ -16,7 +17,7 @@ This repo may help to build more accurate point cloud maps by introducing the in
 
 ![image-20220717140256663](README/image-20220717140256663.png)
 
-## Dependency
+# Dependency
 
 - **OpenCV3.x**(OpenCV4.x is also available, but a small amount of API may need to be modified for the Brief descriptor related library)
 
@@ -31,7 +32,11 @@ This repo may help to build more accurate point cloud maps by introducing the in
   sudo make install
   ```
 
-## Run
+# Latest News
+
+- 2022-07-21: release some test data.
+
+# Run
 
 In the `LIO_SAM_6AXIS/LIO-SAM-6AXIS/launch/ouster128_indoors.launch`, just set your `bag_path` and `sequence`.(Other configuration files are not ready, be careful not to use them)
 
@@ -78,8 +83,15 @@ We analyze why it is effective in indoor scenarios:
 
 # Dataset
 
-**Fusion Portable(IROS 2022)**：
+- garden_day: [one_drive](https://hkustconnect-my.sharepoint.com/:u:/g/personal/xhubd_connect_ust_hk/EQavWMqsN6FCiKlpBanFis8Bci-Mwl3S_-g1XPrUrVFB9Q?e=lGEKFE)
+
+when you download this compressed data, remember to execute the following command
+
+```bash
+rosbag decompress 20220216_garden_day_ref_compressed.bag
+```
+
+**FusionPortable(IROS 2022)**：
 
 ![image-20220717141558342](README/image-20220717141558342.png)
 
-I will upload some test rosbag later!
