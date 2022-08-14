@@ -95,3 +95,6 @@ rosbag decompress 20220216_garden_day_ref_compressed.bag
 
 ![image-20220717141558342](README/image-20220717141558342.png)
 
+# Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=JokerJohn/LIO-SAM-6AXIS-INTENSITY&type=Date.svg+xml)](https://star-history.com/#JokerJohn/LIO-SAM-6AXIS-INTENSITY&Date)
